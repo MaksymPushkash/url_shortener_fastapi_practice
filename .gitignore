@@ -1,0 +1,5 @@
+# Ignore local environment variable files
+# This pattern hides .env, .env.db, .env.jwt, and any similar env files
+.env*
+
+
