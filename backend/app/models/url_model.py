@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from datetime import datetime
 from backend.app.database.database import Base
 
@@ -12,6 +12,7 @@ class Urls(Base):
     short_url = Column(String, nullable=False)
     created_at = Column(DateTime, default=datetime.now)
     clicks = Column(Integer, default=0)
+    user_id = Column(Integer, ForeignKey("users.id"))
 
 
 
